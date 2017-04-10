@@ -345,7 +345,7 @@ if (STATIC_BOEHMGC)
 					--enable-silent-rules
 					--silent
 			BUILD_COMMAND cd ${CMAKE_BINARY_DIR}/libs/src/BoehmGC &&
-				make CFLAGS=-w
+				make CFLAGS="-w -DNO_GETCONTEXT"
 			INSTALL_COMMAND cd ${CMAKE_BINARY_DIR}/libs/src/BoehmGC &&
 				make install
 		)
