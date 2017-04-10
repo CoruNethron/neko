@@ -323,7 +323,7 @@ if (STATIC_BOEHMGC)
 		ExternalProject_Add(libatomic_ops
 			${EP_CONFIGS}
 			URL http://www.ivmaisoft.com/_bin/atomic_ops/libatomic_ops-7.4.4.tar.gz
-			URL_MD5 1d6538604b314d2fccdf86915e5c0857
+			URL_MD5 426d804baae12c372967a6d183e25af2
 			CONFIGURE_COMMAND echo skip config
 			BUILD_COMMAND echo skip build
 			INSTALL_COMMAND echo skip install
@@ -333,7 +333,7 @@ if (STATIC_BOEHMGC)
 			${EP_CONFIGS}
 			DEPENDS libatomic_ops
 			URL http://hboehm.info/gc/gc_source/gc-7.4.4.tar.gz
-			URL_MD5 12c05fd2811d989341d8c6d81f66af87
+			URL_MD5 96d18b0448a841c88d56e4ab3d180297
 			PATCH_COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_BINARY_DIR}/libs/src/libatomic_ops ${CMAKE_BINARY_DIR}/libs/src/BoehmGC/libatomic_ops
 			CONFIGURE_COMMAND cd ${CMAKE_BINARY_DIR}/libs/src/BoehmGC &&
 				./configure
